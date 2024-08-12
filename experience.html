@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="experience.css">
+    <title>Professional Experience - Ubaid</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Ubaid</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="#" class="active">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="experience">
+        <video autoplay muted loop class="bg-video1">
+            <source src="images/184815-874271897.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="experience-content">
+            <h1>Professional Experience</h1>
+
+            <div class="experience-item">
+                <h2>IIE Varsity College</h2>
+                <p class="role">Private Tutor</p>
+                <p class="dates">March 2024 - Present</p>
+                <p class="description">
+                    Provided personalized C# and Java programming tuition to first and second-year students, helping them strengthen their understanding of core concepts, improve coding skills, and successfully complete coursework. Tailored lessons to individual learning styles, fostering a supportive and engaging learning environment that encouraged student success.
+                </p>
+            </div>
+            <br>
+            <div class="experience-item">
+                <h2>Afzal Fragrances</h2>
+                <p class="role">Sales and Marketing Specialist / Webmaster</p>
+                <p class="dates">2017 - Present</p>
+                <ul class="description">
+                    <li> Performed various functions in a family-orientated business which allowed my skill-set in all business operations to be explored.</li>
+                    <li> Managed sales teams at various exhibitions across the country.</li>
+                    <li> Assisted in research & development of innovative products in the industry.</li>
+                    <li> Currently managing and working part-time at a mall-based outlet for the company.</li>
+                    <li> Revamped and currently managing the company’s website by transforming an outdated PHP-based platform into a modern, innovative WordPress e-commerce site. This involved implementing responsive design, optimizing user experience, and integrating advanced e-commerce functionality to drive online sales and enhance the brand’s digital presence.</li>
+                </ul>
+            </div>
+            <br>
+            <div class="experience-item">
+                <h2>Vrentals Car & Van Hire</h2>
+                <p class="role">Data Capturer and Administrative Assistant</p>
+                <p class="dates">July 2021 - December 2021</p>
+                <ul class="description">
+                    <li> Accurately entered and managed large volumes of data, ensuring high levels of accuracy and efficiency.</li>
+                    <li> Developed strong attention to detail and the ability to maintain full concentration in a fast-paced environment.</li>
+                    <li> Collaborated effectively with team members to streamline administrative processes and improve overall office efficiency.</li>
+                    <li> Gained experience in handling confidential information, maintaining records, and supporting daily operational tasks.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function() {
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+            });
+        });
+    </script>
+</body>
+</html>

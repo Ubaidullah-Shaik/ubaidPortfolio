@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="education.css">
+    <title>Education - Ubaid</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Ubaid</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="#" class="active">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="education">
+        <video autoplay muted loop class="bg-video1">
+            <source src="images/184815-874271897.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="education-content">
+            <h1>Education</h1>
+            <div class="education-item">
+                <h2>National Senior Certificate</h2>
+                <p class="institution">Sastri College</p>
+                <p class="dates">2016 - 2020</p>
+                <p class="subjects">Mathematics, English, Afrikaans, Physical Science, Biology, Geography, LO</p>
+                <a href="UYS NSC 2020.pdf" class="btn" target="_blank">View NSC Results</a>
+            </div>
+            <br>
+            <div class="education-item">
+                <h2>Bachelor of Computer and Information Science</h2>
+                <p class="institution">IIE Varsity College</p>
+                <p class="dates">2022 - Present</p>
+                <p class="focus">Programming Languages: Java, C#, Kotlin, JavaScript<br>
+                Web Development: HTML, CSS, ASP.NET MVC<br>
+                Software Development: GitHub, Docker<br>
+                Database Management: SQL, Firebase<br>
+                Cloud Computing: Microsoft Azure, Firebase<br>
+                Project Management: Management tools, Agile Methodologies, SDLC, Administrative skills, Data analysis<br>
+                Communication & Teamwork: Verbal and Written Communication, Computer Literacy</p>
+            </div>
+            <div class="semester">
+                <h2>Semester 1</h2>
+                <ul>
+                    <li>Programming 1A (PROG5121) - 70%</li>
+                    <li>Programming Logic and Design (PRLD5121) - 82%</li>
+                    <li>Network Engineering 1A (NWEG5111) - 94%</li>
+                    <li>Mathematical Principles for Computer Science (MAPC5112) - 88%</li>
+                </ul>
+                <a href="sem1.pdf" class="btn" target="_blank">View Transcript</a>
+            </div>
+            <div class="semester">
+                <h2>Semester 2</h2>
+                <ul>
+                    <li>Network Engineering 1B (NWEG5122) - 81%</li>
+                    <li>IT Professional Practice (ITPP5112) - 83%</li>
+                    <li>Programming 1B (PROG6112) - 81%</li>
+                    <li>Principles of Security (PRSE6212) - 87%</li>
+                </ul>
+                <a href="sem2.pdf" class="btn" target="_blank">View Transcript</a>
+            </div>
+            <div class="semester">
+                <h2>Semester 3</h2>
+                <ul>
+                    <li>System Analysis and Design (SAND6221) - 85%</li>
+                    <li>Programming 2A (PROG6221) - 87%</li>
+                    <li>Databases (DBAS6211) - 87%</li>
+                    <li>Cloud Development A (CLDV6211) - 85%</li>
+                </ul>
+                <a href="sem3.pdf" class="btn" target="_blank">View Transcript</a>
+            </div>
+            <div class="semester">
+                <h2>Semester 4</h2>
+                <ul>
+                    <li>Software Engineering (SOEN6222) - 84%</li>
+                    <li>Programming 2B (PROG6212) - 84%</li>
+                    <li>Cloud Development B (CLDV6212) - 91%</li>
+                    <li>Advanced Databases (ADDB7311) - 79%</li>
+                </ul>
+                <a href="sem4.pdf" class="btn" target="_blank">View Transcript</a>
+            </div>
+            <div class="semester">
+                <h2>Semester 5</h2>
+                <ul>
+                    <li>Programming 3A (PROG7311) - 82%</li>
+                    <li>Open Source Coding (Introduction) (OPSC7311) - 86%</li>
+                    <li>IT Project Management (IPMA6212) - 69%</li>
+                    <li>Introduction to Research (INRS7321) - 76%</li>
+                </ul>
+                <a href="sem5.png" class="btn" target="_blank">View Transcript</a>
+            </div>
+            <div class="semester">
+                <h2>Semester 6</h2>
+                <ul>
+                    <li>Work Integrated Learning 3 (XBCAD7319) - In Progress</li>
+                    <li>Programming 3B (PROG7312) - In Progress</li>
+                    <li>Open Source Coding (Intermediate) (OPSC7312) - In Progress</li>
+                    <li>Application Development Security (APDS7311) - In Progress</li>
+                </ul>
+                <a href="semester6-transcript.pdf" class="btn" target="_blank">View Transcript</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function() {
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+            });
+        });
+    </script>
+</body>
+</html>

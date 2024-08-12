@@ -1,0 +1,136 @@
+/* General styling for the education page */
+body {
+    width: 100%;
+    height: 100%;
+    color: white;
+    overflow: scroll; /* Prevents scroll bars caused by the video */
+    margin: 0; /* Ensures no extra margin around the body */
+    padding: 0; /* Ensures no extra padding around the body */
+}
+
+.education {
+    min-height: 100vh;
+    padding: 5rem 9%;
+    color: #f0f0f0;
+    position: relative;
+}
+.bg-video1 {
+    position: fixed; /* Fixes the video to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+    z-index: -1; /* Places the video behind the content */
+}
+.education-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: #2b2b2b;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 45px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+}
+.education-content:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4), 0px 0px 30px 10px rgba(183, 75, 75, 0.7);
+}
+
+
+.education-content h1 {
+    font-size: 4.5rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.education-item {
+    margin-bottom: 2rem;
+}
+
+.education-item h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.education-item .institution {
+    font-size: 1.8rem;
+    color: #d1d1d1;
+    margin-bottom: 0.5rem;
+}
+
+.education-item .dates {
+    font-size: 1.6rem;
+    color: #b4b4b4;
+    margin-bottom: 0.5rem;
+}
+
+.education-item .subjects, .education-item .focus {
+    font-size: 1.6rem;
+    color: #e0e0e0;
+}
+
+.semester {
+    margin-bottom: 2rem;
+}
+
+.semester h2 {
+    font-size: 2.2rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.semester ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.semester ul li {
+    font-size: 1.6rem;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+}
+
+/* Adjust for responsiveness */
+@media (max-width: 1000px) {
+    .education-content {
+        padding: 2rem;
+    }
+
+    .education-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .education-item h2 {
+        font-size: 2rem;
+    }
+
+    .semester h2 {
+        font-size: 2rem;
+    }
+
+    .semester ul li {
+        font-size: 1.4rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #b74b4b;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a23d3d;
+}

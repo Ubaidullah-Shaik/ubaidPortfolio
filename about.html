@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <title>About Me - Ubaid</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Ubaid</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" class="active">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="about">
+        <video autoplay muted loop class="bg-video1">
+            <source src="images/184815-874271897.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>I am a motivated Computer Science graduate with hands-on experience in programming, software development, and cloud computing. I bring a blend of technical skills and problem-solving abilities that make me a valuable asset to any team. My goal is to continually grow in the IT sector, developing expertise in software engineering, cloud solutions, and emerging technologies like AI.</p>
+
+            <p>Over the years, I have had the opportunity to gain valuable experience in various roles:</p>
+
+            <ul>
+                <li> <strong>Private Tutor at IIE Varsity College:</strong> Provided personalized C# and Java programming tuition to first and second-year students, helping them strengthen their understanding of core concepts, improve coding skills, and successfully complete coursework.</li>
+                <li> <strong>Sales and Marketing Specialist / Webmaster at Afzal Fragrances:</strong> Managed sales teams, assisted in R&D of innovative products, and revamped the company's website to a modern WordPress e-commerce platform.</li>
+                <li> <strong>Data Capturer and Administrative Assistant at Vrentals Car & Van Hire:</strong> Accurately entered and managed large volumes of data, developed strong attention to detail, and collaborated effectively with team members to improve office efficiency.</li>
+            </ul>
+
+            <p>My self-motivated approach to learning and technical acumen enable me to tackle challenges with creativity and precision. I aim to leverage my comprehensive understanding of Computer Science to contribute innovative solutions as a software engineer.</p>
+
+            <p>When I'm not coding or learning about new technologies, I enjoy exploring the latest in software development and cloud computing trends, constantly seeking opportunities to improve and apply my skills in meaningful ways.</p>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function() {
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+            });
+        });
+    </script>
+</body>
+
+</html>
