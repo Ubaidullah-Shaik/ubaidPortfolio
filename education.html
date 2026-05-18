@@ -1,199 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="education.css">
-    <title>Education - Ubaid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Education — Ubaid</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Ubaid</a>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="#" class="active">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="education">
-        <video autoplay muted loop class="bg-video1">
-            <source src="images/184815-874271897.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="education-content">
-            <h1>Education</h1>
-            <div class="education-item">
-                <h2>National Senior Certificate</h2>
-                <p class="institution">Sastri College</p>
-                <p class="dates">2016 - 2020</p>
-                <p class="subjects">Mathematics, English, Afrikaans, Physical Science, Biology, Geography, LO</p>
-                <a href="UYS NSC 2020.pdf" class="btn" target="_blank">View NSC Results</a>
-            </div>
-            <br>
-            <div class="education-item">
-                <h2>Bachelor of Computer and Information Science</h2>
-                <p class="institution">IIE Varsity College</p>
-                <p class="dates">2022 - 2024</p>
-                <p class="focus">Programming Languages: Java, C#, Kotlin, JavaScript<br>
-                Web Development: HTML, CSS, ASP.NET MVC<br>
-                Software Development: GitHub, Docker<br>
-                Database Management: SQL, Firebase<br>
-                Cloud Computing: Microsoft Azure, Firebase<br>
-                Project Management: Management tools, Agile Methodologies, SDLC, Administrative skills, Data analysis<br>
-                Communication & Teamwork: Verbal and Written Communication, Computer Literacy</p>
-            </div>
-            <div class="semester">
-                <h2>Semester 1</h2>
-                <ul>
-                    <li>Programming 1A (PROG5121) - 70%</li>
-                    <li>Programming Logic and Design (PRLD5121) - 82%</li>
-                    <li>Network Engineering 1A (NWEG5111) - 94%</li>
-                    <li>Mathematical Principles for Computer Science (MAPC5112) - 88%</li>
-                </ul>
-                <a href="sem1.pdf" class="btn" target="_blank">View Transcript</a>
-            </div>
-            <div class="semester">
-                <h2>Semester 2</h2>
-                <ul>
-                    <li>Network Engineering 1B (NWEG5122) - 81%</li>
-                    <li>IT Professional Practice (ITPP5112) - 83%</li>
-                    <li>Programming 1B (PROG6112) - 81%</li>
-                    <li>Principles of Security (PRSE6212) - 87%</li>
-                </ul>
-                <a href="sem2.pdf" class="btn" target="_blank">View Transcript</a>
-            </div>
-            <div class="semester">
-                <h2>Semester 3</h2>
-                <ul>
-                    <li>System Analysis and Design (SAND6221) - 85%</li>
-                    <li>Programming 2A (PROG6221) - 87%</li>
-                    <li>Databases (DBAS6211) - 87%</li>
-                    <li>Cloud Development A (CLDV6211) - 85%</li>
-                </ul>
-                <a href="sem3.pdf" class="btn" target="_blank">View Transcript</a>
-            </div>
-            <div class="semester">
-                <h2>Semester 4</h2>
-                <ul>
-                    <li>Software Engineering (SOEN6222) - 84%</li>
-                    <li>Programming 2B (PROG6212) - 84%</li>
-                    <li>Cloud Development B (CLDV6212) - 91%</li>
-                    <li>Advanced Databases (ADDB7311) - 79%</li>
-                </ul>
-                <a href="sem4.pdf" class="btn" target="_blank">View Transcript</a>
-            </div>
-            <div class="semester">
-                <h2>Semester 5</h2>
-                <ul>
-                    <li>Programming 3A (PROG7311) - 82%</li>
-                    <li>Open Source Coding (Introduction) (OPSC7311) - 86%</li>
-                    <li>IT Project Management (IPMA6212) - 69%</li>
-                    <li>Introduction to Research (INRS7321) - 76%</li>
-                </ul>
-                <a href="sem5.pdf" class="btn" target="_blank">View Transcript</a>
-            </div>
-            <div class="semester">
-                <h2>Semester 6</h2>
-                <ul>
-                    <li>Work Integrated Learning 3 (XBCAD7319) - 92%</li>
-                    <li>Programming 3B (PROG7312) - 86%</li>
-                    <li>Open Source Coding (Intermediate) (OPSC7312) - 92%</li>
-                    <li>Application Development Security (APDS7311) - 75%</li>
-                </ul>
-                <a href="sem6.pdf" class="btn" target="_blank">View Transcript</a>
-            </div>
-        </div>
-    </section>
+  <div class="atmosphere"></div>
+  <div class="grid-bg"></div>
+  <canvas class="constellation"></canvas>
+  <div class="scan-beam"></div>
+  <div class="rails"></div>
+  <div class="horizon"></div>
+  <div class="reticles"></div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('header');
-            let lastScrollTop = 0;
+  <div class="page-transition">
+    <div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div>
+  </div>
 
-            window.addEventListener('scroll', function() {
-                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  <div class="ticker">
+    <div class="ticker-content">
+      <span>Codex 004 · The Foundations</span>
+      <span>Academic Record</span>
+      <span>Six Semesters · One Degree</span>
+      <span>Codex 004 · The Foundations</span>
+      <span>Academic Record</span>
+      <span>Six Semesters · One Degree</span>
+    </div>
+  </div>
 
-                if (currentScrollTop > lastScrollTop) {
-                    // Scrolling down
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    header.style.transform = 'translateY(0)';
-                }
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span class="brand-text">Ubaid<em>.</em></span>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html">Index</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <span class="nav-counter">04 / <strong>07</strong></span>
+    </nav>
+  </header>
 
-                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-
-    mobileMenu.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
-});
-    </script>
-     <!-- custom cursor element (desktop only) -->
-    <div class="cursor" id="cursor">
-      <div class="cursor-ring"></div>
-      <div class="cursor-dot"></div>
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span class="index">Codex 004</span>
+        <span>The Foundations</span>
+      </div>
+      <h1 class="section-title">
+        Academic <em>record.</em>
+      </h1>
+      <p class="section-lede">
+        Two qualifications. Six semesters of formal computer science training. The grades below reflect the work — not a marketing pitch.
+      </p>
     </div>
 
-    <script>
-      (function(){
-        const cursor = document.getElementById('cursor');
-        if (!cursor) return;
-        const dot = cursor.querySelector('.cursor-dot');
-        const ring = cursor.querySelector('.cursor-ring');
-        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-        let ringX = mouseX, ringY = mouseY;
-        const ease = 0.18;
+    <!-- Top-level qualifications -->
+    <div class="education-stack">
+      <div class="edu-card">
+        <div class="year">2016<br><strong>2020</strong></div>
+        <div class="info">
+          <h3>National Senior <em>Certificate</em></h3>
+          <div class="institution">Sastri College · Durban</div>
+          <div class="details">
+            Mathematics · English · Afrikaans<br>
+            Physical Science · Biology · Geography · LO
+          </div>
+        </div>
+        <div class="grade">
+          <span class="label">Status</span>
+          Pass
+        </div>
+        <a href="UYS NSC 2020.pdf" class="arrow-link" target="_blank">↗</a>
+      </div>
 
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-          cursor.classList.remove('hidden');
-          cursor.style.left = mouseX + 'px';
-          cursor.style.top = mouseY + 'px';
-        });
-        window.addEventListener('mouseleave', () => cursor.classList.add('hidden'));
-        window.addEventListener('mouseenter', () => cursor.classList.remove('hidden'));
+      <div class="edu-card">
+        <div class="year">2022<br><strong>2024</strong></div>
+        <div class="info">
+          <h3>BCIS<br><em>Bachelor of Computer &amp; Information Science</em></h3>
+          <div class="institution">IIE Varsity College</div>
+          <div class="details">
+            <strong style="color: var(--paper)">Programming:</strong> Java, C#, Kotlin, JavaScript<br>
+            <strong style="color: var(--paper)">Web:</strong> HTML, CSS, ASP.NET MVC<br>
+            <strong style="color: var(--paper)">Cloud:</strong> Microsoft Azure, Firebase<br>
+            <strong style="color: var(--paper)">Data:</strong> SQL, Firebase<br>
+            <strong style="color: var(--paper)">Methods:</strong> Agile · SDLC · Data analysis
+          </div>
+        </div>
+        <div class="grade">
+          <span class="label">Distinction</span>
+          84<span style="font-size: 2rem">%</span>
+        </div>
+        <span class="arrow-link">●</span>
+      </div>
+    </div>
 
-        function animate() {
-          ringX += (mouseX - ringX) * ease;
-          ringY += (mouseY - ringY) * ease;
-          ring.style.transform = `translate(${ringX - mouseX}px, ${ringY - mouseY}px) translate(-50%, -50%)`;
-          requestAnimationFrame(animate);
-        }
-        animate();
+    <!-- Semester grid -->
+    <div class="section-header" style="margin-top: 12rem">
+      <div class="section-eyebrow">
+        <span class="index">Codex 004.b</span>
+        <span>Transcripts</span>
+      </div>
+      <h2 class="section-title" style="font-size: clamp(3.6rem, 6vw, 6rem)">
+        Six <em>semesters.</em>
+      </h2>
+    </div>
 
-        const interactives = document.querySelectorAll('a, button, .menu-toggle, .btn, .home-img img, .social-icons a, nav a');
-        interactives.forEach(el => {
-          el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
-          el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
-          el.addEventListener('mousedown', () => cursor.classList.add('active'));
-          el.addEventListener('mouseup', () => cursor.classList.remove('active'));
-        });
+    <div class="semester-grid">
+      <div class="semester-card">
+        <div class="sem-num">I</div>
+        <div class="sem-label">Semester · 2022</div>
+        <ul>
+          <li><span>Programming 1A</span><span class="pct">70%</span></li>
+          <li><span>Programming Logic &amp; Design</span><span class="pct">82%</span></li>
+          <li><span>Network Engineering 1A</span><span class="pct">94%</span></li>
+          <li><span>Mathematical Principles for CS</span><span class="pct">88%</span></li>
+        </ul>
+        <a href="sem1.pdf" class="sem-btn" target="_blank">View Transcript <span>↗</span></a>
+      </div>
 
-        window.addEventListener('touchstart', () => {
-          cursor.style.display = 'none';
-          const html = document.documentElement;
-          if (html) html.style.cursor = 'auto';
-        }, {passive: true});
-      })();
-    </script>
+      <div class="semester-card">
+        <div class="sem-num">II</div>
+        <div class="sem-label">Semester · 2022</div>
+        <ul>
+          <li><span>Network Engineering 1B</span><span class="pct">81%</span></li>
+          <li><span>IT Professional Practice</span><span class="pct">83%</span></li>
+          <li><span>Programming 1B</span><span class="pct">81%</span></li>
+          <li><span>Principles of Security</span><span class="pct">87%</span></li>
+        </ul>
+        <a href="sem2.pdf" class="sem-btn" target="_blank">View Transcript <span>↗</span></a>
+      </div>
+
+      <div class="semester-card">
+        <div class="sem-num">III</div>
+        <div class="sem-label">Semester · 2023</div>
+        <ul>
+          <li><span>System Analysis &amp; Design</span><span class="pct">85%</span></li>
+          <li><span>Programming 2A</span><span class="pct">87%</span></li>
+          <li><span>Databases</span><span class="pct">87%</span></li>
+          <li><span>Cloud Development A</span><span class="pct">85%</span></li>
+        </ul>
+        <a href="sem3.pdf" class="sem-btn" target="_blank">View Transcript <span>↗</span></a>
+      </div>
+
+      <div class="semester-card">
+        <div class="sem-num">IV</div>
+        <div class="sem-label">Semester · 2023</div>
+        <ul>
+          <li><span>Software Engineering</span><span class="pct">84%</span></li>
+          <li><span>Programming 2B</span><span class="pct">84%</span></li>
+          <li><span>Cloud Development B</span><span class="pct">91%</span></li>
+          <li><span>Advanced Databases</span><span class="pct">79%</span></li>
+        </ul>
+        <a href="sem4.pdf" class="sem-btn" target="_blank">View Transcript <span>↗</span></a>
+      </div>
+
+      <div class="semester-card">
+        <div class="sem-num">V</div>
+        <div class="sem-label">Semester · 2024</div>
+        <ul>
+          <li><span>Programming 3A</span><span class="pct">82%</span></li>
+          <li><span>Open Source Coding (Intro)</span><span class="pct">86%</span></li>
+          <li><span>IT Project Management</span><span class="pct">69%</span></li>
+          <li><span>Introduction to Research</span><span class="pct">76%</span></li>
+        </ul>
+        <a href="sem5.pdf" class="sem-btn" target="_blank">View Transcript <span>↗</span></a>
+      </div>
+
+      <div class="semester-card">
+        <div class="sem-num">VI</div>
+        <div class="sem-label">Semester · 2024</div>
+        <ul>
+          <li><span>Work Integrated Learning 3</span><span class="pct">92%</span></li>
+          <li><span>Programming 3B</span><span class="pct">86%</span></li>
+          <li><span>Open Source Coding (Int.)</span><span class="pct">92%</span></li>
+          <li><span>Application Development Sec.</span><span class="pct">75%</span></li>
+        </ul>
+        <a href="sem6.pdf" class="sem-btn" target="_blank">View Transcript <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="left">© MMXXV · Ubaid</span>
+    <span class="center">◆ The Architect's Codex ◆</span>
+    <span class="right">Durban · ZA</span>
+  </footer>
+
+  <div class="status-hud">
+    <div class="status-line"><span class="pulse"></span> Reading Codex 004</div>
+    <div>v.2025.11</div>
+  </div>
+
+  <div class="cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
