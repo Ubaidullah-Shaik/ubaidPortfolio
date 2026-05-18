@@ -245,6 +245,132 @@
     });
   });
 
+  // ===== HERO PORTRAIT INTERACTIVE REVEAL =====
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('hero-portrait-container');
+    const canvas = document.getElementById('portrait-reveal-canvas');
+    const baseImg = document.querySelector('.hero-portrait-base');
+
+    if (!container || !canvas || !baseImg) return;
+
+    const ctx = canvas.getContext('2d');
+    const revealImg = new Image();
+    // Use the same image for reveal - it will show the non-grayscale version
+    revealImg.src = baseImg.src;
+
+    let isFullyRevealed = false;
+    let isHovering = false;
+    let mouseX = 0;
+    let mouseY = 0;
+
+    // Set canvas size to match image
+    function resizeCanvas() {
+      const rect = baseImg.getBoundingClientRect();
+      canvas.width = baseImg.naturalWidth || rect.width;
+      canvas.height = baseImg.naturalHeight || rect.height;
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+    }
+
+    baseImg.addEventListener('load', resizeCanvas);
+    window.addEventListener('resize', resizeCanvas);
+
+    // Wait for reveal image to load
+    revealImg.onload = function() {
+      resizeCanvas();
+      console.log('Hero portrait reveal ready');
+    };
+
+    // Track mouse position relative to image
+    container.addEventListener('mouseenter', function(e) {
+      isHovering = true;
+      container.classList.add('revealing');
+      updateMousePosition(e);
+    });
+
+    container.addEventListener('mouseleave', function() {
+      isHovering = false;
+      container.classList.remove('revealing');
+      if (!isFullyRevealed) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    });
+
+    container.addEventListener('mousemove', function(e) {
+      if (isHovering && !isFullyRevealed) {
+        updateMousePosition(e);
+        drawReveal();
+      }
+    });
+
+    // Click to reveal full image
+    container.addEventListener('click', function(e) {
+      if (!isFullyRevealed) {
+        isFullyRevealed = true;
+        container.classList.add('fully-revealed');
+        container.classList.remove('revealing');
+        drawFullReveal();
+      } else {
+        isFullyRevealed = false;
+        container.classList.remove('fully-revealed');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    });
+
+    function updateMousePosition(e) {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      mouseX = (e.clientX - rect.left) * scaleX;
+      mouseY = (e.clientY - rect.top) * scaleY;
+    }
+
+    function drawReveal() {
+      if (!revealImg.complete) return;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Create circular reveal area with smooth edges
+      const radius = 100;
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(mouseX, mouseY, radius, 0, Math.PI * 2);
+      ctx.clip();
+
+      // Draw the reveal image (full color, no grayscale)
+      ctx.drawImage(revealImg, 0, 0, canvas.width, canvas.height);
+
+      ctx.restore();
+
+      // Add glowing border around reveal circle
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(mouseX, mouseY, radius, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(193, 39, 45, 0.8)';
+      ctx.lineWidth = 3;
+      ctx.shadowColor = 'rgba(193, 39, 45, 0.6)';
+      ctx.shadowBlur = 10;
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawFullReveal() {
+      if (!revealImg.complete) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(revealImg, 0, 0, canvas.width, canvas.height);
+    }
+
+    // Make cursor clickable when showing VIEW text
+    const cursor = document.querySelector('.cursor');
+    if (cursor) {
+      cursor.addEventListener('click', function(e) {
+        if (cursor.classList.contains('text') && isHovering && !isFullyRevealed) {
+          container.click();
+        }
+      });
+    }
+  });
+
   // ===== INTERSECTION REVEAL ANIMATIONS =====
   document.addEventListener('DOMContentLoaded', function() {
     const reveals = document.querySelectorAll('[data-reveal]');
