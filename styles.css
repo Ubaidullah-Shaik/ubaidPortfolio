@@ -97,6 +97,9 @@ img { display: block; max-width: 100%; }
     radial-gradient(ellipse at 80% 100%, #0d1416 0%, transparent 55%),
     radial-gradient(ellipse at 50% 50%, #0c0907 0%, #050403 70%, #030201 100%);
   overflow: hidden;
+  /* Ensure visibility */
+  opacity: 1;
+  display: block;
 }
 
 /* Aurora — three colored bands that drift in deep slow loops */
@@ -105,13 +108,13 @@ img { display: block; max-width: 100%; }
   position: absolute;
   inset: -10%;
   background:
-    radial-gradient(ellipse 60% 40% at 15% 25%, rgba(193, 39, 45, 0.22), transparent 60%),
-    radial-gradient(ellipse 50% 35% at 85% 75%, rgba(244, 162, 97, 0.14), transparent 65%),
-    radial-gradient(ellipse 45% 30% at 50% 100%, rgba(0, 180, 200, 0.08), transparent 60%),
-    radial-gradient(ellipse 40% 50% at 0% 50%, rgba(120, 60, 180, 0.07), transparent 70%);
+    radial-gradient(ellipse 60% 40% at 15% 25%, rgba(193, 39, 45, 0.35), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 85% 75%, rgba(244, 162, 97, 0.25), transparent 65%),
+    radial-gradient(ellipse 45% 30% at 50% 100%, rgba(0, 180, 200, 0.15), transparent 60%),
+    radial-gradient(ellipse 40% 50% at 0% 50%, rgba(120, 60, 180, 0.12), transparent 70%);
   filter: blur(60px);
   animation: aurora 35s ease-in-out infinite;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 /* Second aurora layer offset for depth */
@@ -141,16 +144,17 @@ img { display: block; max-width: 100%; }
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(244, 241, 235, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 241, 235, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(193, 39, 45, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(193, 39, 45, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(244, 241, 235, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 241, 235, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(193, 39, 45, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193, 39, 45, 0.2) 1px, transparent 1px);
   background-size: 80px 80px, 80px 80px, 400px 400px, 400px 400px;
   mask-image:
     radial-gradient(ellipse 80% 70% at center, black 0%, rgba(0,0,0,0.6) 40%, transparent 90%);
   -webkit-mask-image:
     radial-gradient(ellipse 80% 70% at center, black 0%, rgba(0,0,0,0.6) 40%, transparent 90%);
   animation: gridPulse 12s ease-in-out infinite;
+  opacity: 1;
 }
 
 @keyframes gridPulse {
@@ -164,7 +168,8 @@ img { display: block; max-width: 100%; }
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 1;
+  display: block;
 }
 
 /* Scanning horizontal beam — like a CRT sweep */
@@ -948,6 +953,8 @@ img { display: block; max-width: 100%; }
   min-height: 100vh;
   padding: 12rem 4rem 6rem;
   position: relative;
+  background: transparent;
+  z-index: 1;
 }
 
 .section-header {
