@@ -1,141 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="about.css">
-    <title>About Me - Ubaid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>About — Ubaid</title>
 </head>
-
 <body>
-    <header>
-        <a href="#" class="logo">Ubaid</a>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="#" class="active">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="about">
-        <video autoplay muted loop class="bg-video1">
-            <source src="images/184815-874271897.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+  <div class="atmosphere"></div>
+  <div class="grid-bg"></div>
+  <canvas class="constellation"></canvas>
+  <div class="scan-beam"></div>
+  <div class="rails"></div>
+  <div class="horizon"></div>
+  <div class="reticles"></div>
 
-        <div class="about-content">
-            <h1>About Me</h1>
+  <div class="page-transition">
+    <div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div>
+  </div>
 
-            <p>I am a motivated Computer Science graduate with hands-on experience in programming, software development, and cloud computing. I bring a blend of technical skills and problem-solving abilities that make me a valuable asset to any team. My goal is to continually grow in the IT sector, developing expertise in software engineering, cloud solutions, and emerging technologies like AI.</p>
+  <div class="ticker">
+    <div class="ticker-content">
+      <span>Codex 002 · The Architect</span>
+      <span>Background · Origins · Pursuit</span>
+      <span>The Architect's Codex</span>
+      <span>Codex 002 · The Architect</span>
+      <span>Background · Origins · Pursuit</span>
+      <span>The Architect's Codex</span>
+    </div>
+  </div>
 
-            <p>Over the years, I have had the opportunity to gain valuable experience in various roles:</p>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span class="brand-text">Ubaid<em>.</em></span>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html">Index</a>
+      <a href="about.html" class="active">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <span class="nav-counter">02 / <strong>07</strong></span>
+    </nav>
+  </header>
 
-            <ul>
-                <li> <strong>Junior Software Developer at Providence Software Solutions (Pty) Ltd:</strong> Involved in full-stack web development using C#, ASP.NET, React, and SAP API integrations. Focused on designing responsive interfaces, improving system reliability, and streamlining enterprise processes. <br> <strong>Certified IBM AI Assistant Engineer</strong> — skilled in building and deploying AI-driven agents using <strong>IBM watsonx</strong> and <strong>Microsoft Copilot Studio</strong> to enhance business automation and customer engagement.</li>
-
-                <li> <strong>Private Tutor at IIE Varsity College:</strong> Provided personalized C# and Java programming tuition to first and second-year students, helping them strengthen their understanding of core concepts, improve coding skills, and successfully complete coursework.</li>
-
-                <li> <strong>Sales and Marketing Specialist / Webmaster at Afzal Fragrances:</strong> Managed sales teams, assisted in R&D of innovative products, and revamped the company's website to a modern WordPress e-commerce platform.</li>
-
-                <li> <strong>Data Capturer and Administrative Assistant at Vrentals Car & Van Hire:</strong> Accurately entered and managed large volumes of data, developed strong attention to detail, and collaborated effectively with team members to improve office efficiency.</li>
-            </ul>
-
-            <p>My self-motivated approach to learning and technical acumen enable me to tackle challenges with creativity and precision. I aim to leverage my comprehensive understanding of Computer Science to contribute innovative solutions as a software engineer.</p>
-
-            <p>When I'm not coding or learning about new technologies, I enjoy exploring the latest in software development and cloud computing trends, constantly seeking opportunities to improve and apply my skills in meaningful ways.</p>
-        </div>
-    </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('header');
-            let lastScrollTop = 0;
-
-            window.addEventListener('scroll', function() {
-                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (currentScrollTop > lastScrollTop) {
-                    // Scrolling down
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    header.style.transform = 'translateY(0)';
-                }
-
-                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navMenu = document.querySelector('.nav-menu');
-
-            mobileMenu.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        });
-    </script>
-     <!-- custom cursor element (desktop only) -->
-    <div class="cursor" id="cursor">
-      <div class="cursor-ring"></div>
-      <div class="cursor-dot"></div>
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span class="index">Codex 002</span>
+        <span>The Architect</span>
+      </div>
+      <h1 class="section-title">
+        About <em>the practice.</em>
+      </h1>
+      <p class="section-lede">
+        A short reading on origin, intent, and the work I do. I build software with care, ship cloud infrastructure with discipline, and engineer AI agents with curiosity.
+      </p>
     </div>
 
-    <script>
-      (function(){
-        const cursor = document.getElementById('cursor');
-        if (!cursor) return;
-        const dot = cursor.querySelector('.cursor-dot');
-        const ring = cursor.querySelector('.cursor-ring');
-        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-        let ringX = mouseX, ringY = mouseY;
-        const ease = 0.18;
+    <div class="about-layout">
+      <aside class="about-left">
+        <div class="about-portrait">
+          <img src="images/Untitled-removebg-preview.png" alt="Ubaid">
+        </div>
+        <div class="about-meta">
+          <div class="meta-row"><span>Born</span><strong>Durban · ZA</strong></div>
+          <div class="meta-row"><span>Degree</span><strong>BCIS</strong></div>
+          <div class="meta-row"><span>Studio</span><strong>Providence</strong></div>
+          <div class="meta-row"><span>Stack</span><strong>C# · React · SAP</strong></div>
+          <div class="meta-row"><span>Cert.</span><strong>IBM watsonx</strong></div>
+          <div class="meta-row"><span>Status</span><strong style="color: var(--blood)">Engaged</strong></div>
+        </div>
+      </aside>
 
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-          cursor.classList.remove('hidden');
-          cursor.style.left = mouseX + 'px';
-          cursor.style.top = mouseY + 'px';
-        });
-        window.addEventListener('mouseleave', () => cursor.classList.add('hidden'));
-        window.addEventListener('mouseenter', () => cursor.classList.remove('hidden'));
+      <div class="about-prose">
+        <p>
+          I am a motivated Computer Science graduate with hands-on experience across programming, software development, and cloud computing. My practice blends technical precision with problem-solving — the kind of work that makes me a useful addition to any team trying to build something durable.
+        </p>
 
-        function animate() {
-          ringX += (mouseX - ringX) * ease;
-          ringY += (mouseY - ringY) * ease;
-          ring.style.transform = `translate(${ringX - mouseX}px, ${ringY - mouseY}px) translate(-50%, -50%)`;
-          requestAnimationFrame(animate);
-        }
-        animate();
+        <p>
+          My goal is to <em>continually grow</em> in the IT sector, developing depth in software engineering, cloud solutions, and emerging technologies like AI. I treat every project as a chance to refine craft, not just ship features.
+        </p>
 
-        const interactives = document.querySelectorAll('a, button, .menu-toggle, .btn, .home-img img, .social-icons a, nav a');
-        interactives.forEach(el => {
-          el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
-          el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
-          el.addEventListener('mousedown', () => cursor.classList.add('active'));
-          el.addEventListener('mouseup', () => cursor.classList.remove('active'));
-        });
+        <p>
+          At <strong>Providence Software Solutions</strong>, I'm a Junior Software Developer working full-stack with C#, ASP.NET, React, and SAP API integrations — designing responsive interfaces, improving system reliability, and streamlining enterprise processes. I'm also a <strong>Certified IBM AI Assistant Engineer</strong>, building and deploying AI-driven agents using IBM watsonx and Microsoft Copilot Studio.
+        </p>
 
-        window.addEventListener('touchstart', () => {
-          cursor.style.display = 'none';
-          const html = document.documentElement;
-          if (html) html.style.cursor = 'auto';
-        }, {passive: true});
-      })();
-    </script>
+        <p>
+          Before that, I tutored first and second-year students at <strong>IIE Varsity College</strong> in C# and Java, helped run a family fragrance business and rebuilt its e-commerce platform, and handled large-volume data capture at a car rental firm — each role teaching me a different rhythm of work.
+        </p>
+
+        <p>
+          When I'm not coding or studying the latest in software and cloud, I'm reading about how good systems are designed and trying to apply that thinking everywhere — from a button's hover state to a deployment pipeline.
+        </p>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="about-marquee">
+      <div class="about-marquee-track">
+        <span>Software <em>engineering</em></span>
+        <span>Cloud <em>architecture</em></span>
+        <span>AI <em>agents</em></span>
+        <span>Full-stack <em>development</em></span>
+        <span>UI &amp; <em>UX</em></span>
+        <span>Software <em>engineering</em></span>
+        <span>Cloud <em>architecture</em></span>
+        <span>AI <em>agents</em></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="left">© MMXXV · Ubaid</span>
+    <span class="center">◆ The Architect's Codex ◆</span>
+    <span class="right">Durban · ZA</span>
+  </footer>
+
+  <div class="status-hud">
+    <div class="status-line"><span class="pulse"></span> Reading Codex 002</div>
+    <div>v.2025.11</div>
+  </div>
+
+  <div class="cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
-
 </html>
