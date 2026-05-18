@@ -8,7 +8,12 @@
   // ===== CONSTELLATION CANVAS BACKGROUND =====
   document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.querySelector('.constellation');
-    if (!canvas) return;
+    if (!canvas) {
+      console.error('Constellation canvas not found!');
+      return;
+    }
+
+    console.log('Constellation canvas found, initializing...');
 
     const ctx = canvas.getContext('2d');
     let width, height;
@@ -41,6 +46,7 @@
     function initParticles() {
       particles = [];
       const count = Math.min(80, Math.floor((window.innerWidth * window.innerHeight) / 18000));
+      console.log(`Creating ${count} particles`);
       for (let i = 0; i < count; i++) {
         particles.push({
           x: Math.random() * window.innerWidth,
@@ -55,6 +61,7 @@
       }
     }
     initParticles();
+    console.log('Particles initialized, starting animation...');
 
     function animate() {
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
