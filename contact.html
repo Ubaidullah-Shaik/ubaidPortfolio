@@ -1,150 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contact.css">
-    <title>Contact - Ubaid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contact — Ubaid</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Ubaid</a>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="#" class="active">Contact</a>
-        </nav>
-    </header>
 
-    <section class="contact">
-        <video autoplay muted loop class="bg-video1">
-            <source src="images/13495-248644905.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="contact-content">
-            <h1>Contact Me</h1>
-            <p>If you have any questions, feel free to reach out to me!</p>
+  <div class="atmosphere"></div>
+  <div class="grid-bg"></div>
+  <canvas class="constellation"></canvas>
+  <div class="scan-beam"></div>
+  <div class="rails"></div>
+  <div class="horizon"></div>
+  <div class="reticles"></div>
 
-            <div class="contact-details">
-                <h2>My Contact Details</h2>
-                <ul>
-                    <li><i class="fas fa-phone-alt"></i> +27 67 829 2538</li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:ubaidshaik24@gmail.com">ubaidshaik24@gmail.com</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> Durban, South Africa</li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ubaidullah-shaik-600272247" target="_blank">LinkedIn Profile</a></li>
-                </ul>
-            </div>
-<br>
-<br>
-            <div class="get-in-touch">
-                <h2>Get in Touch</h2>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="hidden" name="access_key" value="c12f55e6-d2c7-408c-a3ec-d876e03321e9">
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <div class="page-transition">
+    <div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div><div class="slice"></div>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
+  <div class="ticker">
+    <div class="ticker-content">
+      <span>Codex 007 · The Address</span>
+      <span>Direct Channels</span>
+      <span>Open for Engagement</span>
+      <span>Codex 007 · The Address</span>
+      <span>Direct Channels</span>
+      <span>Open for Engagement</span>
+    </div>
+  </div>
 
-    mobileMenu.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
-});
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('header');
-            let lastScrollTop = 0;
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span class="brand-text">Ubaid<em>.</em></span>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html">Index</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+      <span class="nav-counter">07 / <strong>07</strong></span>
+    </nav>
+  </header>
 
-            window.addEventListener('scroll', function() {
-                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (currentScrollTop > lastScrollTop) {
-                    // Scrolling down
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    header.style.transform = 'translateY(0)';
-                }
-
-                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
-            });
-        });
-    </script>
-     <!-- custom cursor element (desktop only) -->
-    <div class="cursor" id="cursor">
-      <div class="cursor-ring"></div>
-      <div class="cursor-dot"></div>
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span class="index">Codex 007</span>
+        <span>The Address</span>
+      </div>
     </div>
 
-    <script>
-      (function(){
-        const cursor = document.getElementById('cursor');
-        if (!cursor) return;
-        const dot = cursor.querySelector('.cursor-dot');
-        const ring = cursor.querySelector('.cursor-ring');
-        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-        let ringX = mouseX, ringY = mouseY;
-        const ease = 0.18;
+    <div class="contact-layout">
+      <div class="contact-left">
+        <h2>
+          Let us<br>
+          <em>begin</em> something.
+        </h2>
+        <p style="font-family: var(--font-mono); font-size: 1.3rem; line-height: 1.9; color: var(--bone); max-width: 540px;">
+          Available for freelance, full-time, and collaborative engagements. Reach out via any channel below — I respond within 24 hours.
+        </p>
 
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-          cursor.classList.remove('hidden');
-          cursor.style.left = mouseX + 'px';
-          cursor.style.top = mouseY + 'px';
-        });
-        window.addEventListener('mouseleave', () => cursor.classList.add('hidden'));
-        window.addEventListener('mouseenter', () => cursor.classList.remove('hidden'));
+        <div class="contact-channels">
+          <div class="contact-channel">
+            <span class="label">Phone</span>
+            <span class="value"><a href="tel:+27678292538">+27 67 829 2538</a></span>
+            <span class="arrow">↗</span>
+          </div>
+          <div class="contact-channel">
+            <span class="label">Email</span>
+            <span class="value"><a href="mailto:ubaidshaik24@gmail.com">ubaidshaik24<em style="font-family: var(--font-italic); font-style: italic; color: var(--blood);">@</em>gmail.com</a></span>
+            <span class="arrow">↗</span>
+          </div>
+          <div class="contact-channel">
+            <span class="label">Location</span>
+            <span class="value">Durban · <em style="font-family: var(--font-italic); font-style: italic; color: var(--blood);">South Africa</em></span>
+            <span class="arrow">●</span>
+          </div>
+          <div class="contact-channel">
+            <span class="label">LinkedIn</span>
+            <span class="value"><a href="https://www.linkedin.com/in/ubaidullah-shaik-600272247" target="_blank">/in/ubaidullah-shaik</a></span>
+            <span class="arrow">↗</span>
+          </div>
+          <div class="contact-channel">
+            <span class="label">GitHub</span>
+            <span class="value"><a href="https://github.com/Ubaidullah-Shaik" target="_blank">/Ubaidullah-Shaik</a></span>
+            <span class="arrow">↗</span>
+          </div>
+        </div>
+      </div>
 
-        function animate() {
-          ringX += (mouseX - ringX) * ease;
-          ringY += (mouseY - ringY) * ease;
-          ring.style.transform = `translate(${ringX - mouseX}px, ${ringY - mouseY}px) translate(-50%, -50%)`;
-          requestAnimationFrame(animate);
-        }
-        animate();
+      <div class="contact-form">
+        <h3>Send a <em>signal</em></h3>
+        <p class="form-sub">Direct dispatch · response within 24h</p>
 
-        const interactives = document.querySelectorAll('a, button, .menu-toggle, .btn, .home-img img, .social-icons a, nav a');
-        interactives.forEach(el => {
-          el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
-          el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
-          el.addEventListener('mousedown', () => cursor.classList.add('active'));
-          el.addEventListener('mouseup', () => cursor.classList.remove('active'));
-        });
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="c12f55e6-d2c7-408c-a3ec-d876e03321e9">
 
-        window.addEventListener('touchstart', () => {
-          cursor.style.display = 'none';
-          const html = document.documentElement;
-          if (html) html.style.cursor = 'auto';
-        }, {passive: true});
-      })();
-    </script>
+          <div class="form-field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@domain.com">
+          </div>
+
+          <div class="form-field">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-send">
+            Transmit
+            <span>→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="left">© MMXXV · Ubaid</span>
+    <span class="center">◆ The End of the Codex ◆</span>
+    <span class="right">Durban · ZA</span>
+  </footer>
+
+  <div class="status-hud">
+    <div class="status-line"><span class="pulse"></span> Reading Codex 007</div>
+    <div>v.2025.11</div>
+  </div>
+
+  <div class="cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
